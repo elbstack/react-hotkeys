@@ -58,6 +58,7 @@
     "lodash.isequal": "^4.5.0",
     "lodash.isobject": "^3.0.2",
     "mousetrap": "^1.5.2",
+    "postinstall-build": "^5.0.1",
     "prop-types": "^15.6.0"
   },
   "files": [
@@ -88,7 +89,8 @@
     "build-umd-development": "BABEL_ENV=umd-development NODE_ENV=development rollup --format umd --name ReactHotkeys -c --file umd/react-hotkeys.js",
     "build-production": "BABEL_ENV=production NODE_ENV=production rollup --format cjs -c --file cjs/react-hotkeys.production.min.js",
     "build-es-production": "BABEL_ENV=production NODE_ENV=production rollup --format es -c --file es/react-hotkeys.production.min.js",
-    "build-umd-production": "BABEL_ENV=production NODE_ENV=production rollup --format umd --name ReactHotkeys -c --file umd/react-hotkeys.min.js"
+    "build-umd-production": "BABEL_ENV=production NODE_ENV=production rollup --format umd --name ReactHotkeys -c --file umd/react-hotkeys.min.js",
+    "postinstall": "postinstall-build cjs --script prepublish"
   },
   "author": "Aleck Greenham",
   "contributors": [
